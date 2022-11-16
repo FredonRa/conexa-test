@@ -5,7 +5,7 @@ import { MdPerson, MdMale, MdFemale, MdLocationOn, MdFavorite } from "react-icon
 
 interface CardProps {
     item: Character,
-    position: string
+    position: "first" | "second"
 }
  
 const Card: FC<CardProps> = ({ item, position }) => {
