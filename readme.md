@@ -15,7 +15,7 @@ Versión LTS => https://nodejs.org/es
 ![Demo image](https://github.com/FredonRa/conexa-test/blob/master/src/assets/screenshot.png)
 
 *** DEMO ***
-- Link:
+- Link: https://conexa-test.vercel.app/
 
 *** RUN ***
 - Instalar paquetes necesarios
