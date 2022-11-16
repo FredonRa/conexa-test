@@ -4,7 +4,7 @@ import Card from "./Card";
 
 interface CharactersProps {
     characters: Character[],
-    position: string,
+    position: "first" | "second",
     title: string
 }
  
