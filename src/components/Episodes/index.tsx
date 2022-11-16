@@ -1,7 +1,7 @@
 import { FC, useContext, useEffect, useState } from "react";
 import { CharacterContext } from "../../context/CharacterProvider";
 import { EpisodeServices } from "../../services/EpisodeServices";
-import { Episode } from "../../types/Episode";
+import { Episode, EpisodeResponse } from "../../types/Episode";
 import Spinner from "../Spinner";
 import Episodes from "./Episodes";
 import "./styles.scss"
@@ -41,7 +41,7 @@ const AllEpisodes: FC = () => {
         if(!selectedCharacters.first || !selectedCharacters.second) return
 
         try {
-            const response = await EpisodeServices.get<Episode[]>([
+            const response = await EpisodeServices.get<Episode[] |  []>([
                 getEpisodeId(firstCharacterEpisodes || []), 
                 getEpisodeId(secondCharacterEpisodes || []), 
                 getEpisodeId(bothEpisodes)

@@ -3,9 +3,9 @@ import {
 	RouterProvider
 } from "react-router-dom";
 import { CharacterProvider } from "./context/CharacterProvider";
-import HomePage from "./Pages/HomePage";
+import HomePage from "./pages/HomePage";
 import "./App.scss"
-import ErrorPage from "./Pages/ErrorPage";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
 	{

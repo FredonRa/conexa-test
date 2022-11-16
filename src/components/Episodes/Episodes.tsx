@@ -3,13 +3,11 @@ import { Episode, EpisodeResponse } from "../../types/Episode";
 import Item from "./Item";
 
 interface EpisodesProps {
-    episodes: EpisodeResponse | Episode[]  |  undefined
+    episodes: Episode[]
     title: string
 }
  
-const Episodes: FC<EpisodesProps> = ({ episodes, title }) => {
-    if(episodes?.results) episodes = episodes.results;
-    
+const Episodes: FC<EpisodesProps> = ({ episodes = [], title }) => {
     return ( 
         <div>
             <h2>{title}</h2>

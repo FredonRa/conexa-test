@@ -5,6 +5,7 @@
 - Api Fetch (Async & Await)
 - Hooks
 - Rick and Morty API (https://rickandmortyapi.com/)
+- Vite (bundles)
 
 *** REQUISITOS ***
 - Node >= v16
