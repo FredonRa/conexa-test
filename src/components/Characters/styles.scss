@@ -1,0 +1,85 @@
+$violet: #3B3486;
+
+#container-characters {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    gap: 10px;
+    height: calc(100vh - 430px);
+    overflow: hidden;
+    .container {
+        h1 { width: 100%; }
+        .characters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: auto;
+            max-width: 920px;
+            height: calc(100vh - 520px);
+            background-color: #f1f2f3;
+            border-radius: 14px;
+            overflow-y: auto;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            .card {
+                width: calc(50% - 40px);
+                background-color: #fff;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                border-radius: 12px;
+                position: relative;
+                filter: drop-shadow(2px 4px 6px rgba(0,0,0,.1));
+                cursor: pointer;
+                border: solid 2px #fff;
+                img { width: 100%; height: auto; border-radius: 8px; }
+                .card-description {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    span {
+                        display: flex;
+                        height: 30px;
+                        align-items: center;
+                        font-size: 16px;
+                        font-weight: 600;
+                        p { margin-left: 2px; }
+                    }
+                }
+                @media screen and (max-width: 1425px) {
+                    width: 100%;
+                    height: 200px;
+                    flex-direction: row;
+                    img { 
+                        height: 100%; 
+                        width: fit-content; 
+                        margin-right: 20px; 
+                        border-radius: 8px 0 0 8px;
+                    }
+                    .card-description { flex-direction: column; }
+                }
+                @media screen and (min-width: 1426px) {
+                    .card-description {
+                        position: absolute;
+                        bottom: 25px;
+                        width: calc(100% - 50px);
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        gap: 10px;
+                        padding: 0 10px;
+                        span {
+                            background-color: #fff;
+                            color: $violet;
+                            border: solid 2px $violet;
+                            border-radius: 12px;
+                            padding: 0 8px;
+                            font-weight: 800
+                        };
+                    }
+                }
+            }
+            .card-selected { border-color: $violet; }
+        }
+    }
+}
